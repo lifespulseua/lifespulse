@@ -1,0 +1,110 @@
+.btn {
+  display: block;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  border-radius: 2px 2px 0;
+  background-color: $bg-orange-color;
+  color:$light-gray-text-color;
+  font-family: $secondfont;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  height: 60px;
+  line-height: 60px;
+  padding-left: 50px;
+  padding-right: 50px;
+  position: relative;
+  overflow: hidden;
+
+  &:before {
+    position: absolute;
+    top: 0;
+    left: -75%;
+    z-index: 2;
+    display: block;
+    content: '';
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.2) 100%);
+    transform: skewX(-25deg);
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: $common-orange-light-color;
+    &:before {
+      animation: shine 1.1s;
+    }
+  }
+  &:active {
+    background-color: $bg-orange-color;
+  }
+  @keyframes shine {
+    100% {
+      left: 125%;
+    }
+  }
+
+  &.btn-transparent {
+    background-color: transparent;
+    border-radius: 2px 2px 0;
+    border: 1px solid $bg-orange-color;
+    color: $main-text-color;
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background-color: #f6f4f4;
+      opacity: 0.3;
+      z-index: -1;
+    }
+    &:hover {
+      cursor: pointer;
+      background-color: rgba(255,173,119, .2);
+      &:before {
+        animation: shine 1.1s;
+      }
+    }
+    &:active {
+      background-color: transparent;
+    }
+  }
+
+  &.m--with-loader {
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      .loader {
+        opacity: 1;
+        width: 41px;
+        margin-left: 20px;
+      }
+    }
+
+    .loader {
+      width: 0;
+      margin-left: 0;
+      opacity: 0;
+      transition: .5s;
+    }
+  }
+
+  &.m--noactive {
+    background-color: $common-gray-lighter-color;
+    border: 1px solid $main-light-text-color;
+
+    &:before {
+      display: none;
+    }
+
+    &:hover {
+      cursor: not-allowed;
+      background-color: $common-gray-lighter-color;
+    }
+  }
+}

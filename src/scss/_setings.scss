@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,600|Roboto:300,400,500,700');
+
+$mainfont: 'Roboto', sans-serif;
+$secondfont: 'Montserrat', sans-serif;
+
+//BG
+$bg-main-color: #363636;
+$bg-white-color: #ffffff;
+$bg-orange-color: #e96b17;
+$bg-second-color: #f6f4f4;
+$bg-third-color: #ececec;
+$bg-popup-color: rgba(246, 244, 244, .8);
+
+//Fonts-color
+$main-text-color: #252526;
+$main-light-text-color: #363636;
+$white-text-color: #ffffff;
+$gray-text-color: #cccbca;
+$light-gray-text-color: #e5e5e5;
+$orange-text-color: #e96b17;
+$orange-light-text-color: #ffad77;
+$alert-text-color: #b44444;
+
+//Other
+$common-alert-color: #b44444;
+$common-alert-light-color: #fb8484;
+$common-disabled-color: #944714;
+$common-orange-color: #e96b17;
+$common-orange-light-color: #fc8e45;
+$common-orange-lighter-color: #ffad77;
+$common-gray-color: #9f9e9d;
+$common-gray-light-color: #beb4b6;
+$common-gray-lighter-color: #e5e5e5;
+$common-white-color: #fffbfb;

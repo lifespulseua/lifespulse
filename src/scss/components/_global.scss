@@ -1,0 +1,51 @@
+body {
+  font-family: $mainfont;
+  font-weight: 400;
+  font-size: 16px;
+  background-color: $bg-second-color;
+}
+
+h2 {
+  color: $main-text-color;
+  font-family: $mainfont;
+  font-size: 37px;
+  font-weight: 700;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+
+  &.h2Underline:after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -9px;
+    width: 100%;
+    height: 2px;
+    background-color: $bg-orange-color;
+  }
+}
+
+input, textarea {
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  -webkit-appearance: none;
+  box-sizing: border-box;
+  resize: none;
+}
+
+input[type='number'] {
+  -moz-appearance:textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.block-line {
+  width: 100%;
+  height: 1px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.24);
+  background-color: $white-text-color;
+}

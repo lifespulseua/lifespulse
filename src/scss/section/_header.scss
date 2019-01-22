@@ -1,0 +1,118 @@
+.main-header {
+  width: 100%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.24);
+  background-color: rgba(54,54,54, .98);
+  opacity: 0.99;
+  height: 80px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 20;
+
+  .main-header-wrapper {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 33px;
+    height: 100%;
+    align-items: center;
+
+    .navigation-side {
+      display: flex;
+      justify-content: space-between;
+
+      .navigation {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-right: 90px;
+
+        li {
+          margin-right: 35px;
+
+          &:last-child {
+            margin-right: 0;
+          }
+
+          a {
+            color: $white-text-color;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 18px;
+            transition: .2s;
+            position: relative;
+            &:after {
+              content: '';
+              display: block;
+              position: absolute;
+              bottom: -5px;
+              left: 50%;
+              width: 0;
+              transition: .3s;
+              height: 1px;
+              background-color: $bg-orange-color;
+            }
+            &:hover {
+              cursor: pointer;
+
+              &:after {
+                width: 100%;
+                left: 0;
+              }
+
+              & > .sub-menu {
+                display: block;
+              }
+            }
+          }
+        }
+      }
+
+      .button-block {
+        display: flex;
+
+        .header-search {
+          margin-right: 20px;
+
+          svg {
+            width: 21px;
+            height: 21px;
+          }
+        }
+
+        .header-login-popup {
+          svg {
+            width: 40px;
+            height: 40px;
+          }
+        }
+
+      }
+    }
+  }
+
+  &.m--account-admin {
+    .main-header-wrapper {
+      max-width: 1400px;
+      padding: 0 33px;
+    }
+
+    .button-block {
+      span,a {
+        color: $white-text-color;
+        font-family: $mainfont;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 16px;
+        margin-right: 20px;
+      }
+
+      a {
+        color: $orange-text-color;
+        margin-right: 0;
+      }
+    }
+  }
+}
