@@ -95,7 +95,7 @@ module.exports = (env, options) => {
             }) : false,
             new CopyWebpackPlugin([
                 {from:'src/img',to:'img'},
-                {from:'src/fonts',to:'fonts'},
+                // {from:'src/fonts',to:'fonts'},
                 {from:'src/template',to:'template'}
             ])
         ].filter(Boolean),
