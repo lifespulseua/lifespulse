@@ -62,17 +62,17 @@ module.exports = (env, options) => {
                             ]
                     })
                 },
-                {
-                    test: /\.(eot|svg|ttf|woff|woff2)$/,
-                    loader : "file-loader",
-                    query : {
-                        name: '../fonts/[name].[ext]',
-                        emitFile: false,
-                        publicPath: function(url) {
-                            return url.replace(/dist/, '')
-                        }
-                    }
-                },
+                // {
+                //     test: /\.(eot|svg|ttf|woff|woff2)$/,
+                //     loader : "file-loader",
+                //     query : {
+                //         name: '../fonts/[name].[ext]',
+                //         emitFile: false,
+                //         publicPath: function(url) {
+                //             return url.replace(/dist/, '')
+                //         }
+                //     }
+                // },
                 {
                     test: /\.(png|jpg|gif)$/,
                     loader : "file-loader",
