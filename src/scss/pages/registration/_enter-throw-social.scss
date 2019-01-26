@@ -1,0 +1,37 @@
+@import "mixins";
+
+.title{
+	font-size: 37px;
+	color: $main-light-text-color;
+	text-transform: uppercase;
+	font-weight: bold;
+	line-height: 49px;
+}
+
+.enter-social-container{
+	margin-top: 49px;
+	&-title{
+		@include title-text;
+	}
+
+	.social-network{
+		display: flex;
+		justify-content: space-evenly;
+		margin-top: 21px;
+		&-button{
+			@include social-button;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 13px;
+			font-weight: bold;
+			.facebook, .google{
+				position: relative;
+				width: 25px;
+				height: 25px;
+				right: 45px;
+			}
+		}
+	}
+}
+
