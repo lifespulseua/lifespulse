@@ -1,0 +1,83 @@
+.user-account-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .user-account-header__wrapper {
+        margin: 0 10px 64px;
+    }
+}
+
+.user-card {
+    display: flex;
+    flex-direction: column;
+    margin-top: 129px;
+    h2 {
+        margin-bottom: 26px;
+    }
+    .user-card-wrapper {
+        display: flex;
+        width: 1134px;
+        height: 320px;
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.24);
+        background-color: $white-text-color;
+        .user-information {
+            margin: 20px 15px 10px 70px;
+            .user-information-header {
+                display: flex;
+                .account-editor {
+                    margin-left: 54px;
+                    margin-bottom: 20px;
+                }
+            }
+            .user-contacts {
+                width: 471px;
+                p {
+                    font-size: 21px;
+                    font-weight: 400;
+                    line-height: 28px;
+                }
+                .line-decoration {
+                    margin-top: 31px;
+                    height: 1px;
+                    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.24);
+                    background-color: $white-text-color;
+                }
+            }
+            .user-social-networks {
+                padding-top: 10px;
+                .social-profiles {
+                    line-height: 28px;
+                    font-size: 21px;
+                    margin-bottom: 22px;
+                    color: $main-text-color;
+                    span {
+                        font-size: 16px;
+                    }
+                }
+                .social-networks-icons {
+                    div {
+                        display: inline-block;
+                        width: 50px;
+                        height: 50px;
+                        font-size: 0;
+                    }
+                     :first-child {
+                        margin-right: 46px;
+                    }
+                    svg {
+                        width: 50px;
+                        height: 50px;
+                    }
+                }
+            }
+        }
+    }
+    .user-photo {
+        display: inline;
+        img {
+            width: 300px;
+            height: 300px;
+            margin: 10px;
+        }
+    }
+}
