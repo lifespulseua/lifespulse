@@ -1,0 +1,157 @@
+@import 'mixins';
+.patient-profile {
+    @include inner();
+    &-header {
+        text-transform: uppercase;
+        @include text-styles($main-light-text-color, $mainfont, 37px, 700, 49px);
+        margin-bottom: 28px;
+        padding-left: 100px;
+    }
+    &-diagnosis {
+        @include text-styles($main-text-color, $mainfont, 21px, 400, 28px);
+        margin-bottom: 56px;
+        padding-left: 100px;
+        width: 800px;
+    }
+    &-inner {
+        display: flex;
+        flex-direction: row;
+        padding: 0 30px;
+        margin-bottom: 56px;
+    }
+    &-description {
+        position: relative;
+        div {
+            width: 800px;
+            box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
+            background-color: $white-text-color;
+            padding-bottom: 30px;
+            margin-bottom: 10px;
+            &>img:first-child {
+                margin-bottom: 50px;
+            }
+            &>p:first-child {
+                padding-top: 30px;
+            }
+            &>h2:first-child {
+                color: blue !important;
+            }
+            img {
+                max-width: 100%;
+                height: auto;
+                display: block;
+                margin: 0 auto;
+                margin-bottom: 19px;
+            }
+            figure {
+                text-align: center;
+                margin-bottom: 29px;
+            }
+            p {
+                @include text-styles($main-text-color, $mainfont, 21px, 400, 28px);
+                padding: 0 30px;
+                margin-bottom: 30px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+            q {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 30px;
+                height: 194px;
+                background-color: $bg-second-color;
+                span {
+                    width: 583px;
+                    margin: 0 auto;
+                    @include text-styles($main-text-color, $mainfont, 21px, 500, 28px);
+                    position: relative;
+                    &::before {
+                        content: '“';
+                        position: absolute;
+                        font-size: 60px;
+                        top: -10px;
+                        left: -40px;
+                    }
+                    &::after {
+                        content: '”';
+                        position: absolute;
+                        font-size: 60px;
+                        bottom: -40px;
+                        right: -40px;
+                    }
+                }
+            }
+            h2 {
+                @include text-styles($main-text-color, $mainfont, 37px, 700, 49px);
+                padding: 0 30px;
+                margin-bottom: 20px;
+                &:nth-of-type(1) {
+                    width: 100%;
+                }
+                &:nth-of-type(1)::after {
+                    content: "";
+                    display: block;
+                    height: 1px;
+                    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.24);
+                    background-color: $white-text-color;
+                }
+                &::after {
+                    content: "";
+                    display: block;
+                    height: 1px;
+                    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.24);
+                    background-color: $white-text-color;
+                    height: 2px;
+                    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.24);
+                    background-color: $common-orange-color;
+                }
+            }
+            ul {
+                padding: 0 30px;
+                margin-bottom: 30px;
+                li {
+                    @include text-styles($main-text-color, $mainfont, 21px, 400, 28px);
+                    padding-left: 30px;
+                    margin-bottom: 22px;
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                    &::before {
+                        content: '';
+                        height: 15px;
+                        width: 15px;
+                        background-color: $common-orange-color;
+                        border-radius: 50%;
+                        display: inline-block;
+                        margin-right: 10px;
+                    }
+                }
+            }
+            ol {
+                padding: 0 30px 0 80px;
+                margin-bottom: 30px;
+                list-style-type: decimal;
+                li {
+                    @include text-styles($main-text-color, $mainfont, 21px, 400, 28px);
+                    margin-bottom: 22px;
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+        a {
+            @include text-styles($main-text-color, $mainfont, 16px, 400, 28px);
+            position: absolute;
+            right: 0;
+            &:hover {
+                color: $common-orange-color;
+            }
+            &:active {
+                text-decoration: underline;
+            }
+        }
+    }
+}

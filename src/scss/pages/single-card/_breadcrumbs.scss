@@ -1,13 +1,10 @@
+@import 'mixins';
 .single-card-breadcrumbs-v1 {
     padding: 110px 0 0 100px;
-    max-width: 1200px;
-    margin: 0 auto 52px;
+    @include inner();
+    margin-bottom: 52px;
     a {
-        color: $main-text-color;
-        font-family: $mainfont;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 28px;
+        @include text-styles($main-text-color, $mainfont, 16px, 400, 28px);
         &:hover {
             color: $common-orange-color;
         }
@@ -35,14 +32,10 @@
 
 .single-card-breadcrumbs-v2 {
     padding: 110px 0 0 100px;
-    max-width: 1200px;
-    margin: 0 auto 52px;
+    @include inner();
+    margin-bottom: 52px;
     a {
-        color: $main-text-color;
-        font-family: $mainfont;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 28px;
+        @include text-styles($main-text-color, $mainfont, 16px, 400, 28px);
         &:hover {
             color: $common-orange-color;
         }
@@ -70,14 +63,10 @@
 
 .single-card-breadcrumbs-v3 {
     padding: 110px 0 0 100px;
-    max-width: 1200px;
-    margin: 0 auto 52px;
+    @include inner();
+    margin-bottom: 52px;
     a {
-        color: $main-text-color;
-        font-family: $mainfont;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 28px;
+        @include text-styles($main-text-color, $mainfont, 16px, 400, 28px);
         &:hover {
             color: $common-orange-color;
             font-weight: bold;
