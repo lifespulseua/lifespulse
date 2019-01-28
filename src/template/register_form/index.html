@@ -107,7 +107,7 @@
 
 <section class="registration">
     <div class="registration-wrapper">
-       <div class="registration-header" action="handler.php">
+       <div class="registration-header">
 
           <h3 class="title">Регистрация пользователя</h3>
             <div class="enter-social-container">
@@ -118,13 +118,55 @@
 
                 <div class="social-network">
 
-                    <button class="social-network-button" type="button"><img src="../../../dist/img/register-facebook.svg" class="facebook" alt="facebook"></img>Facebook</button>
+                    <button class="social-network-button" type="button"><img src="../../../dist/img/register-facebook.svg" class="button" alt="facebook"></img>Facebook</button>
 
-                    <button class="social-network-button" type="button"><img src="../../../dist/img/register-google.svg" class="google" alt="google"></img>Google</button>
+                    <button class="social-network-button" type="button"><img src="../../../dist/img/register-google.svg" class="button" alt="google"></img>Google</button>
 
                 </div>
             </div>
        </div>
+
+       <form action="handler.php" class="form">
+           <div class="form-container">
+                <p class="form-container-title">
+                    или зарегистрироваться через email
+                </p>
+
+                <div class="form-main-input">
+                    <div class="form-main-input-wrapper">
+                        <fieldset class="fieldset">
+                             <label class="label" for="name">Имя:</label>
+                             <span class="icon-typed-right"></span>
+                             <input type="text" id="name" class="input" placeholder="Василий">
+                        </fieldset>  
+
+                         <fieldset class="fieldset">
+                             <label class="label" for="surname">Фамилия (опционально):</label>
+                             <!-- <span class="icon-typed-right"></span> -->
+                             <input type="text" id="surname" class="input" placeholder="Василий">
+                        </fieldset>  
+                    </div>
+
+                    <div class="form-main-input-wrapper">
+                        <fieldset class="fieldset">
+                             <label class="label" for="email">Ваша почта</label>
+                             <!-- <span class="icon-typed-right"></span> -->
+                             <input type="email" id="email" class="input" placeholder="vasiliy@lifespulse.com">
+                        </fieldset> 
+                        <fieldset class="fieldset">
+                             <label class="label" for="tel">Ваш номер телефона (опционально):</label>
+                             <span class="border-right"></span>
+                             <span class="numbers">+38</span>
+                             <span class="hooks">()</span>
+                             <input type="tel" id="tel" class="input-telephone" placeholder="096  33 33 33">
+                             <span class="icon-typed-right-phone"></span>
+                             <span class="text">Ваш номер телефона - конфиденциальная информация. Он не будет доступен другим пользователям</span>
+                        </fieldset>
+                    </div>
+
+                </div>
+           </div>
+       </form>
     </div>
 </section>
 

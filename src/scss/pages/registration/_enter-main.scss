@@ -1,0 +1,93 @@
+@import "mixins";
+
+.form-container{
+	&-title{
+		@include title-text;
+	}
+}
+
+.form-main-input{
+	&-title{
+		@include title-text;
+	}
+
+	&-wrapper{
+		margin-top: 50px;
+		display: flex;
+		justify-content: space-around;
+		align-items: stretch;
+		flex-wrap: wrap;
+		text-align: left;
+		.fieldset{
+			width: 400px;
+			position: relative;
+			.label{
+				@include title-text;
+				position: absolute;
+				left: 0;
+				top: -25px;
+			}
+
+			.icon-typed-right::after{
+				content: '';
+				background-image: url("../img/check-mark.jpg");
+				width: 20px;
+				height: 20px;
+				position: absolute;
+				right: 20px;
+				top: 0;
+				bottom: 0;
+				margin: auto 0;
+			}
+
+			.input{
+				caret-color: $bg-orange-color;
+				@include registration-input;
+				@include placeholder;
+				@include input-text;
+			}
+
+			.text{
+				font-size: 14px;
+				line-height: 21px;
+			}
+
+			.border-right{
+				position: absolute;
+				display: inline-block;
+				width: 62px;
+				height: 50px;
+				border-right: 1px solid $common-gray-lighter-color;;
+			}
+
+			.numbers{
+				position: absolute;
+				@include input-text;
+				line-height: 50px;
+				left: 5%;
+			}
+
+			.hooks{
+				position: absolute;
+				@include input-text;
+				line-height: 47px;
+				left: 19%;
+				letter-spacing: 38px;
+			}
+
+			.input-telephone{
+				@extend .input;
+				&::-webkit-input-placeholder{
+					padding-left: 62px;
+				}
+			}
+
+			.icon-typed-right-phone::after{
+				@extend .icon-typed-right;
+				margin: 0;
+				top: 16%;
+			}
+
+		}
+	}
+}

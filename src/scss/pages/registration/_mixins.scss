@@ -1,13 +1,37 @@
 @mixin title-text{
 	font-size: 21px;
 	color: $main-text-color;
-	font-weight: bold;
-	line-height: 28px;
+	font-weight: light;
 }
 
 @mixin social-button{
 	width: 250px;
 	height: 50px;
 	background-color: $bg-white-color;
-	box-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
+	box-shadow: 1px 1px 1px rgba(0, 0, 0, .24);
+}
+
+@mixin registration-input{
+	width: 400px;
+	height: 50px;
+	border: 1px solid $common-gray-lighter-color;
+	padding: 13px 41px 13px 22px;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, .24);
+	background-color: $bg-white-color;
+	outline: none;
+	&:focus{
+		border: 1px solid $bg-orange-color;
+	}
+}
+
+@mixin placeholder{
+	&::-webkit-input-placeholder{ 
+		color: $gray-text-color;
+	}
+}
+
+@mixin input-text{
+	font-size: 21px;
+	font-weight: light;
+	color: $main-text-color;
 }

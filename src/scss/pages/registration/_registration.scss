@@ -1,4 +1,5 @@
 @import "enter-throw-social";
+@import "enter-main";
 
 .main-header{
 	position: static;
@@ -11,6 +12,7 @@
 		width: 100%;
 		margin: 0 auto;
 		display: flex;
+		flex-direction: column;
 		justify-content: space-between;
 		padding: 0 33px;
 		height: 100%;
@@ -18,7 +20,7 @@
 		.registration-header{
 			width: 100%;
 			font-family: $mainfont;
-			margin: 100px 0;
+			margin: 70px 0;
 			text-align: center;
 			&:after{
 				content: '';
@@ -30,6 +32,13 @@
 				box-shadow: 1px 1px 3px rgba(0, 0, 0, .24);
 				background-color: $bg-white-color;
 			}
+		}
+
+		.form{
+			width: 100%;
+			font-family: $mainfont;
+			margin: 20px 0;
+			text-align: center;
 		}
 	}
 }
