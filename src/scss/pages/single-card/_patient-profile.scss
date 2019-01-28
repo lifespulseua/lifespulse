@@ -1,5 +1,6 @@
 @import 'mixins';
 .patient-profile {
+    padding-bottom: 44px;
     @include inner();
     &-header {
         text-transform: uppercase;
@@ -153,5 +154,165 @@
                 text-decoration: underline;
             }
         }
+    }
+    &-information {
+        padding-left: 30px;
+    }
+    &-record {
+        li {
+            @include text-styles($main-text-color, $mainfont, 16px, 400, 21px);
+            margin-bottom: 30px;
+            &:last-child {
+                margin-bottom: 42px;
+            }
+            b {
+                font-weight: 700;
+            }
+        }
+    }
+    &-deadlines {
+        margin-bottom: 64px;
+        li {
+            @include text-styles($main-text-color, $mainfont, 16px, 300, 18px);
+        }
+    }
+    &-complaint {
+        text-align: center;
+        margin-bottom: 35px;
+        a {
+            @include text-styles($main-text-color, $mainfont, 14px, 300, 28px);
+            &:hover {
+                color: #e96b17;
+            }
+            &:active {
+                text-decoration: underline;
+            }
+        }
+        &:after {
+            content: "";
+            display: block;
+            height: 1px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.24);
+            background-color: $white-text-color;
+        }
+    }
+    &-social-buttons {
+        margin-bottom: 50px;
+        p {
+            text-align: center;
+            @include text-styles($main-text-color, $mainfont, 14px, 300, 21px);
+            margin-bottom: 20px;
+        }
+        div {
+            display: flex;
+            justify-content: center;
+        }
+        a {
+            margin: 0 6px;
+            svg {
+                height: 30px;
+            }
+        }
+    }
+    &-supporters {
+        max-width: 170px;
+        margin: 0 auto;
+        overflow: hidden;
+        h5 {
+            @include text-styles($main-text-color, $mainfont, 21px, 700, 21px);
+            margin-bottom: 25px;
+        }
+        span {
+            @include text-styles($main-text-color, $mainfont, 14px, 400, 18px);
+        }
+        .supporter-info {
+            margin-bottom: 25px;
+            &:last-child {
+                margin-bottom: 15px;
+            }
+        }
+        .supporter-info>span {
+            display: block;
+        }
+        &-btn {
+            width: 100%;
+            text-align: center;
+        }
+    }
+    &-btn-footer {
+        @extend .help-btn-fundraising;
+    }
+}
+
+.fundraising-progress {
+    height: 15px;
+    width: 100%;
+    background-color: $common-orange-color;
+    position: relative;
+    &-bar {
+        position: absolute;
+        height: 100%;
+        background-color: $white-text-color;
+        width: 25%;
+        right: 0;
+    }
+    &-current-sum {
+        position: absolute;
+        bottom: -25px;
+        left: 0;
+    }
+    &-final-sum {
+        position: absolute;
+        bottom: -25px;
+        right: 0;
+    }
+    &--margin-patient {
+        margin-bottom: 45px;
+    }
+}
+
+.social-counters {
+    display: flex;
+    flex-direction: row;
+    height: 21px;
+    &--margin-patient {
+        margin-bottom: 30px;
+    }
+    &-heart,
+    &-share {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        margin-right: 14px;
+        svg {
+            width: 20px;
+            margin-right: 3px;
+        }
+        span {
+            align-self: center;
+        }
+    }
+}
+
+.help-btn-fundraising {
+    width: 248px;
+    height: 60px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    border-radius: 2px 2px 0;
+    background-color: $common-orange-color;
+    margin: 0 auto;
+    @include text-styles($common-gray-lighter-color, $mainfont, 16px, 400, 42px);
+    text-transform: uppercase;
+    &--margin-patient {
+        margin-bottom: 22px;
+    }
+    &:hover {
+        background-color: $common-orange-light-color;
+    }
+    &:active {
+        background-color: $common-orange-color;
+    }
+    &:disabled {
+        background-color: $common-disabled-color;
     }
 }
