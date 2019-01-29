@@ -101,9 +101,6 @@
                 &::after {
                     content: "";
                     display: block;
-                    height: 1px;
-                    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.24);
-                    background-color: $white-text-color;
                     height: 2px;
                     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.24);
                     background-color: $common-orange-color;
@@ -290,6 +287,7 @@
         }
         span {
             align-self: center;
+            @include text-styles($main-text-color, $mainfont, 14px, 300, 28px);
         }
     }
 }

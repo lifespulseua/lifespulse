@@ -1,0 +1,109 @@
+@import 'mixins';
+.related-stories {
+    @include inner();
+    padding: 0 30px 100px;
+    h2 {
+        @include text-styles($main-light-text-color, $mainfont, 37px, 700, 49px);
+        text-transform: uppercase;
+        margin-bottom: 25px;
+        &::after {
+            content: "";
+            display: block;
+            height: 2px;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.16);
+            background-color: $common-orange-color;
+        }
+    }
+    &-cards {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    &-card {
+        max-width: 372px;
+        min-height: 543px;
+        box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
+        background-color: $white-text-color;
+        &-content {
+            padding: 0 29px 22px;
+        }
+        &-img {
+            height: 292px;
+            overflow: hidden;
+            margin-bottom: 15px;
+            img {
+                max-width: 100%;
+                min-height: 100%;
+                object-fit: cover;
+            }
+        }
+        h3 {
+            @include text-styles($main-text-color, $mainfont, 21px, 700, 22px);
+            margin-bottom: 19px;
+            max-height: 42px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+        p {
+            @include text-styles($main-text-color, $mainfont, 16px, 400, 21px);
+            max-height: 84px;
+            margin-bottom: 17px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+    }
+}
+
+.social-counters {
+    display: flex;
+    flex-direction: row;
+    height: 21px;
+    &--margin-card {
+        margin-bottom: 25px;
+    }
+    &-heart,
+    &-share {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        margin-right: 14px;
+        svg {
+            width: 20px;
+            margin-right: 3px;
+        }
+        span {
+            align-self: center;
+            @include text-styles($main-text-color, $mainfont, 14px, 300, 28px);
+        }
+    }
+}
+
+.fundraising-progress {
+    height: 15px;
+    width: 100%;
+    background-color: $common-orange-color;
+    position: relative;
+    &-bar {
+        position: absolute;
+        height: 100%;
+        background-color: $white-text-color;
+        width: 25%;
+        right: 0;
+        &--gray {
+            background-color: $bg-second-color;
+        }
+    }
+    &-current-sum {
+        position: absolute;
+        bottom: -25px;
+        left: 0;
+    }
+    &-final-sum {
+        position: absolute;
+        bottom: -25px;
+        right: 0;
+    }
+    &--margin-card {
+        margin-bottom: 22px;
+    }
+}
