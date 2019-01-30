@@ -1,0 +1,235 @@
+            .user-account-main {
+                width: 1134px;
+                margin: 0 auto;
+                .user-account-main-wrapper {
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+            
+            .bookmarks-block {
+                display: flex;
+                .change-bookmarks {
+                    display: flex;
+                    font-size: 21px;
+                    font-weight: 700;
+                    line-height: 28px;
+                    text-transform: uppercase;
+                    a {
+                        display: inline-block;
+                        padding-right: 30px;
+                    }
+                    .watching {
+                        color: $common-orange-color;
+                        text-decoration: underline;
+                    }
+                    .my-posts {
+                        color: $main-light-text-color;
+                    }
+                }
+                .add-post {
+                    display: flex;
+                    margin-left: 50px;
+                    button {
+                        margin-right: 19px;
+                    }
+                    span {
+                        align-self: center;
+                    }
+                }
+            }
+            
+            .users-block_list {
+                display: flex;
+                flex-direction: column;
+                width: 1134px;
+                margin-top: 40px;
+                .users-block_line {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 100px;
+                    .user-block_copy {
+                        width: 372px;
+                        box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
+                        background-color: $white-text-color;
+                        .img-wrap {
+                            max-width: inherit;
+                            max-height: 292px;
+                            margin: 0;
+                            img {
+                                width: 100%;
+                                height: 292px;
+                                object-fit: cover;
+                                overflow: hidden;
+                                margin: 0;
+                            }
+                        }
+                        .social-plugins {
+                            display: flex;
+                            margin-top: 14px;
+                            margin-left: 29px;
+                            .social-plugins_like {
+                                display: flex;
+                                flex-wrap: nowrap;
+                                width: 50px;
+                                margin-right: 15px;
+                            }
+                            .social-plugins_share {
+                                display: flex;
+                                flex-wrap: nowrap;
+                                width: 50px;
+                                margin-right: 15px;
+                            }
+                            .likes-count,
+                            .shares-count {
+                                margin-left: 5px;
+                                color: $main-text-color;
+                                font-size: 14px;
+                                font-weight: 300;
+                                line-height: 28px;
+                            }
+                            .svg-wrapper {
+                                svg {
+                                    width: 20px;
+                                    height: 20px;
+                                }
+                                 :hover {
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+                    }
+                    .user-subblock-wrapper {
+                        padding: 15px 25px 20px;
+                    }
+                    .h3-wrapper {
+                        display: flex;
+                        height: 42px;
+                        h3 {
+                            display: inline;
+                            color: $main-text-color;
+                            font-weight: 700;
+                            line-height: 21px;
+                        }
+                    }
+                    p {
+                        height: 79px;
+                    }
+                    .collection-status-block {
+                        .collection-dates {
+                            margin-bottom: 21px;
+                            color: $main-text-color;
+                            font-size: 16px;
+                            font-weight: 400;
+                            line-height: 21px;
+                        }
+                        .post-control-buttons {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            .prolong-collection-btn {
+                                margin-bottom: 20px;
+                                .prolong-collection {
+                                    width: 318px;
+                                    height: 60px;
+                                    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+                                    border-radius: 2px 2px 0;
+                                    border: 1px solid $main-light-text-color;
+                                    padding: 20px 40px;
+                                    color: $main-light-text-color;
+                                    font-size: 16px;
+                                    font-weight: 400;
+                                    text-transform: uppercase;
+                                }
+                            }
+                            .change-post-btn {
+                                .change-post {
+                                    width: 318px;
+                                    height: 60px;
+                                    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+                                    border-radius: 2px 2px 0;
+                                    border: 1px solid $common-orange-color;
+                                    padding: 20px 40px;
+                                    color: $main-light-text-color;
+                                    font-size: 16px;
+                                    font-weight: 400;
+                                    text-transform: uppercase;
+                                }
+                            }
+                        }
+                    }
+                    .add-new-post_block {
+                        height: inherit;
+                        width: 372px;
+                        padding-top: 70px;
+                        .add-post_wrap {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+                            button {
+                                margin-bottom: 30px;
+                            }
+                        }
+                    }
+                }
+                .subscription-form-block {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    background-image: url("../img/rawpixel-558597-unsplash.png");
+                    width: inherit;
+                    height: 370px;
+                    h2 {
+                        margin-bottom: 48px;
+                        color: $main-light-text-color;
+                        span {
+                            color: $common-orange-color;
+                        }
+                    }
+                    form {
+                        display: flex;
+                        .email-subscription {
+                            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.24);
+                            border: 1px solid #eaeae8;
+                            background-color: $white-text-color;
+                        }
+                        input[type="submit"] {
+                            color: $common-gray-lighter-color;
+                            font-family: Roboto;
+                            font-size: 16px;
+                            font-weight: 400;
+                            line-height: 42px;
+                            text-transform: uppercase;
+                        }
+                        #email-submission-field {
+                            width: 479px;
+                            height: 53px;
+                            padding-left: 30px;
+                        }
+                         ::placeholder {
+                            width: 188px;
+                            color: $gray-text-color;
+                            font-family: Roboto;
+                            font-size: 21px;
+                            font-weight: 700;
+                            line-height: 30px;
+                            opacity: 0.4;
+                        }
+                         :focus-within,
+                         :hover {
+                            outline: none;
+                            border-color: #e96b17;
+                        }
+                        #submit-button {
+                            width: 248px;
+                            height: 60px;
+                            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+                            border-radius: 2px 2px 0;
+                            background-color: $common-orange-color;
+                            margin-left: 79px;
+                        }
+                    }
+                }
+            }
