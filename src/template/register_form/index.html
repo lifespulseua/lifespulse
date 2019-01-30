@@ -118,9 +118,9 @@
 
                 <div class="social-network">
 
-                    <button class="social-network-button" type="button"><img src="../../../dist/img/register-facebook.svg" class="button" alt="facebook"></img>Facebook</button>
+                    <a href="#" class="social-network-button" type="button"><img src="../../../dist/img/register-facebook.svg" class="icon" alt="facebook"></img>Facebook</a>
 
-                    <button class="social-network-button" type="button"><img src="../../../dist/img/register-google.svg" class="button" alt="google"></img>Google</button>
+                    <a href="#" class="social-network-button" type="button"><img src="../../../dist/img/register-google.svg" class="icon" alt="google"></img>Google</a>
 
                 </div>
             </div>
@@ -136,13 +136,11 @@
                     <div class="form-main-input-wrapper">
                         <fieldset class="fieldset">
                              <label class="label" for="name">Имя:</label>
-                             <span class="icon-typed-right"></span>
-                             <input type="text" id="name" class="input" placeholder="Василий">
+                             <input type="text" id="name" class="input correctly" placeholder="Василий">
                         </fieldset>  
 
                          <fieldset class="fieldset">
                              <label class="label" for="surname">Фамилия (опционально):</label>
-                             <!-- <span class="icon-typed-right"></span> -->
                              <input type="text" id="surname" class="input" placeholder="Василий">
                         </fieldset>  
                     </div>
@@ -150,7 +148,6 @@
                     <div class="form-main-input-wrapper">
                         <fieldset class="fieldset">
                              <label class="label" for="email">Ваша почта</label>
-                             <!-- <span class="icon-typed-right"></span> -->
                              <input type="email" id="email" class="input" placeholder="vasiliy@lifespulse.com">
                         </fieldset> 
                         <fieldset class="fieldset">
@@ -158,17 +155,69 @@
                              <span class="border-right"></span>
                              <span class="numbers">+38</span>
                              <span class="hooks">()</span>
-                             <input type="tel" id="tel" class="input-telephone" placeholder="096  33 33 33">
-                             <span class="icon-typed-right-phone"></span>
+                             <input type="tel" id="tel" class="input-telephone correctly" placeholder="096  33 33 33" pattern="^[ 0-9]+$">
                              <span class="text">Ваш номер телефона - конфиденциальная информация. Он не будет доступен другим пользователям</span>
                         </fieldset>
                     </div>
 
+                    
+                    <div class="form-main-input-wrapper-password">
+                        <fieldset class="fieldset">
+                             <label class="label" for="password">Пароль:</label>
+                             <input type="password" id="password" class="input" placeholder="Введите пароль">
+                             <span class="text">Пароль должен состоять из букв и цифер, содержать минимум 6 знаков, 3 из которых уникальные</span>
+                        </fieldset> 
+                        <fieldset class="fieldset">
+                             <label class="label" for="password_2">Повторите пароль:</label>
+                             <input type="password" id="password_2" class="input" placeholder="Введите пароль">
+                        </fieldset> 
+                    </div>
+
+                    <div class="form-main-input-wrapper-checkbox">
+                         <fieldset class="fieldset clearfix">
+                             <input type="checkbox" id="checkbox" class="input-checkbox" name="checkbox">
+                             <label class="label-checkbox" for="checkbox">Я соглашаюсь с Политикой конфиденциальности и Правилами пользования сайтом</label>
+                        </fieldset>
+                    </div>
+
+                    <div class="form-main-input-wrapper-button">
+                        <button class="create-profile-button">Создать профиль</button>
+                    </div>
+
+                    <div class="form-main-input-wrapper-button">
+                        <button class="create-profile-button" disabled>Создать профиль</button>
+                    </div>
                 </div>
            </div>
        </form>
     </div>
+
+    <div class="support">
+        <p>Есть вопросы?<a href='mailto:support@info.com' class="support-email">support@info.com</a></p>
+        <a href='#' class="support-profile">Уже есть аккаунт?</a>
+    </div>
+
+    <div class="check-news">
+
+        <div class="check-news-wrapper">
+            <div class="check-news-title">
+                <h3 class="title">Следите за новостями <span class="span">LIFES</span>PULSE</h3>
+            </div>
+        </div>
+
+        <form action="handler.php" class="check-news-form">
+            <div class="check-news-form-container">
+                <fieldset class="fieldset">
+                    <input type="email" class="input" placeholder="Введите Ваш e-mail">
+                    <button class="button">Подписаться</button>
+                </fieldset> 
+            </div>   
+        </form>
+
+    </div>
+
 </section>
+
 
 <footer class="main-footer">
     <div class="main-footer-wrapper">

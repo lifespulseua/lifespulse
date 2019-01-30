@@ -1,5 +1,7 @@
 @import "enter-throw-social";
 @import "enter-main";
+@import "support";
+@import "check-news";
 
 .main-header{
 	position: static;
@@ -7,6 +9,7 @@
 
 .registration{
 	background-color: $bg-second-color;
+	font-family: "Roboto", sans-serif;
 	&-wrapper{
 		max-width: 1200px;
 		width: 100%;
@@ -22,7 +25,7 @@
 			font-family: $mainfont;
 			margin: 70px 0;
 			text-align: center;
-			&:after{
+			&::after{
 				content: '';
 				display: block;
 				position: relative;

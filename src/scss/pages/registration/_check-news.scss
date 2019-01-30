@@ -1,0 +1,48 @@
+@import "mixins";
+
+.check-news{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 380px;
+	background-image: url("../img/check-news-bg.jpg");
+	background-size: cover;
+	background-position: 0 85%;
+	background-repeat: no-repeat;
+	&-wrapper{
+		width: 700px;
+	}
+	&-title{
+		margin-left: -66px;
+		.span{
+			color: $orange-text-color;
+		}
+	}
+	&-form{
+		&-container{
+			display: flex;
+			justify-content: space-between;
+			align-items: stretch;
+			flex-wrap: wrap;
+
+			.fieldset{
+				.input{
+					@include registration-input;
+					@include input-text;
+					@include placeholder;
+					caret-color: $bg-orange-color;
+					width: 480px;
+					margin-top: 50px;
+				}
+				.button{
+					@include button;
+					display: inline-block;
+					margin-left: 80px;
+				}
+			}
+		
+		}
+	}
+	
+}
