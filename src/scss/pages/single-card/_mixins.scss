@@ -1,0 +1,12 @@
+@mixin inner() {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@mixin text-styles($color, $fontFamily, $size, $weight, $lineHeight) {
+    color: $color;
+    font-family: $fontFamily;
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $lineHeight;
+}

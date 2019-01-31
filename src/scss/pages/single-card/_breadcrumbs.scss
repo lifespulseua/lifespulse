@@ -1,0 +1,96 @@
+@import 'mixins';
+.single-card-breadcrumbs-v1 {
+    padding: 110px 0 0 100px;
+    @include inner();
+    margin-bottom: 52px;
+    a {
+        @include text-styles($main-text-color, $mainfont, 16px, 400, 28px);
+        &:hover {
+            color: $common-orange-color;
+        }
+        &:active {
+            text-decoration: underline;
+        }
+        &.breadcrumb-active {
+            color: $common-orange-color;
+        }
+        &:last-child {
+            pointer-events: none;
+            cursor: default;
+        }
+        &:last-child::after {
+            display: none;
+        }
+        &::after {
+            content: '>';
+            margin-left: 5px;
+            display: inline-block;
+            text-decoration: none;
+        }
+    }
+}
+
+.single-card-breadcrumbs-v2 {
+    padding: 110px 0 0 100px;
+    @include inner();
+    margin-bottom: 52px;
+    a {
+        @include text-styles($main-text-color, $mainfont, 16px, 400, 28px);
+        &:hover {
+            color: $common-orange-color;
+        }
+        &:active {
+            text-decoration: underline;
+        }
+        &.breadcrumb-active {
+            color: $common-orange-color;
+        }
+        &:last-child {
+            pointer-events: none;
+            cursor: default;
+        }
+        &:last-child::after {
+            display: none;
+        }
+        &::after {
+            content: '/';
+            margin-left: 5px;
+            display: inline-block;
+            text-decoration: none;
+        }
+    }
+}
+
+.single-card-breadcrumbs-v3 {
+    padding: 110px 0 0 100px;
+    @include inner();
+    margin-bottom: 52px;
+    a {
+        @include text-styles($main-text-color, $mainfont, 16px, 400, 28px);
+        &:hover {
+            color: $common-orange-color;
+            font-weight: bold;
+        }
+        &:active {
+            text-decoration: underline;
+            font-weight: bold;
+        }
+        &.breadcrumb-active {
+            font-weight: bold;
+        }
+        &:last-child {
+            pointer-events: none;
+            cursor: default;
+            font-weight: bold;
+        }
+        &:last-child::after {
+            display: none;
+        }
+        &::after {
+            content: '-';
+            margin-left: 5px;
+            display: inline-block;
+            text-decoration: none;
+        }
+    }
+}

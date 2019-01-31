@@ -1,0 +1,320 @@
+@import 'mixins';
+.patient-profile {
+    padding-bottom: 44px;
+    @include inner();
+    &-header {
+        text-transform: uppercase;
+        @include text-styles($main-light-text-color, $mainfont, 37px, 700, 49px);
+        margin-bottom: 28px;
+        padding-left: 100px;
+    }
+    &-diagnosis {
+        @include text-styles($main-text-color, $mainfont, 21px, 400, 28px);
+        margin-bottom: 56px;
+        padding-left: 100px;
+        width: 800px;
+    }
+    &-inner {
+        display: flex;
+        flex-direction: row;
+        padding: 0 30px;
+        margin-bottom: 56px;
+    }
+    &-description {
+        position: relative;
+        div {
+            width: 800px;
+            box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
+            background-color: $white-text-color;
+            padding-bottom: 30px;
+            margin-bottom: 10px;
+            &>img:first-child {
+                margin-bottom: 50px;
+            }
+            &>p:first-child {
+                padding-top: 30px;
+            }
+            &>h2:first-child {
+                color: blue !important;
+            }
+            img {
+                max-width: 100%;
+                height: auto;
+                display: block;
+                margin: 0 auto;
+                margin-bottom: 19px;
+            }
+            figure {
+                text-align: center;
+                margin-bottom: 29px;
+            }
+            p {
+                @include text-styles($main-text-color, $mainfont, 21px, 400, 28px);
+                padding: 0 30px;
+                margin-bottom: 30px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+            q {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 30px;
+                height: 194px;
+                background-color: $bg-second-color;
+                span {
+                    width: 583px;
+                    margin: 0 auto;
+                    @include text-styles($main-text-color, $mainfont, 21px, 500, 28px);
+                    position: relative;
+                    &::before {
+                        content: '“';
+                        position: absolute;
+                        font-size: 60px;
+                        top: -10px;
+                        left: -40px;
+                    }
+                    &::after {
+                        content: '”';
+                        position: absolute;
+                        font-size: 60px;
+                        bottom: -40px;
+                        right: -40px;
+                    }
+                }
+            }
+            h2 {
+                @include text-styles($main-text-color, $mainfont, 37px, 700, 49px);
+                padding: 0 30px;
+                margin-bottom: 20px;
+                &:nth-of-type(1) {
+                    width: 100%;
+                }
+                &:nth-of-type(1)::after {
+                    content: "";
+                    display: block;
+                    height: 1px;
+                    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.24);
+                    background-color: $white-text-color;
+                }
+                &::after {
+                    content: "";
+                    display: block;
+                    height: 2px;
+                    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.24);
+                    background-color: $common-orange-color;
+                }
+            }
+            ul {
+                padding: 0 30px;
+                margin-bottom: 30px;
+                li {
+                    @include text-styles($main-text-color, $mainfont, 21px, 400, 28px);
+                    padding-left: 30px;
+                    margin-bottom: 22px;
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                    &::before {
+                        content: '';
+                        height: 15px;
+                        width: 15px;
+                        background-color: $common-orange-color;
+                        border-radius: 50%;
+                        display: inline-block;
+                        margin-right: 10px;
+                    }
+                }
+            }
+            ol {
+                padding: 0 30px 0 80px;
+                margin-bottom: 30px;
+                list-style-type: decimal;
+                li {
+                    @include text-styles($main-text-color, $mainfont, 21px, 400, 28px);
+                    margin-bottom: 22px;
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+        a {
+            @include text-styles($main-text-color, $mainfont, 16px, 400, 28px);
+            position: absolute;
+            right: 0;
+            &:hover {
+                color: $common-orange-color;
+            }
+            &:active {
+                text-decoration: underline;
+            }
+        }
+    }
+    &-information {
+        padding-left: 30px;
+    }
+    &-record {
+        li {
+            @include text-styles($main-text-color, $mainfont, 16px, 400, 21px);
+            margin-bottom: 30px;
+            &:last-child {
+                margin-bottom: 42px;
+            }
+            b {
+                font-weight: 700;
+            }
+        }
+    }
+    &-deadlines {
+        margin-bottom: 64px;
+        li {
+            @include text-styles($main-text-color, $mainfont, 16px, 300, 18px);
+        }
+    }
+    &-complaint {
+        text-align: center;
+        margin-bottom: 35px;
+        a {
+            @include text-styles($main-text-color, $mainfont, 14px, 300, 28px);
+            &:hover {
+                color: #e96b17;
+            }
+            &:active {
+                text-decoration: underline;
+            }
+        }
+        &:after {
+            content: "";
+            display: block;
+            height: 1px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.24);
+            background-color: $white-text-color;
+        }
+    }
+    &-social-buttons {
+        margin-bottom: 50px;
+        p {
+            text-align: center;
+            @include text-styles($main-text-color, $mainfont, 14px, 300, 21px);
+            margin-bottom: 20px;
+        }
+        div {
+            display: flex;
+            justify-content: center;
+        }
+        a {
+            margin: 0 6px;
+            svg {
+                height: 30px;
+            }
+        }
+    }
+    &-supporters {
+        max-width: 170px;
+        margin: 0 auto;
+        overflow: hidden;
+        h5 {
+            @include text-styles($main-text-color, $mainfont, 21px, 700, 21px);
+            margin-bottom: 25px;
+        }
+        span {
+            @include text-styles($main-text-color, $mainfont, 14px, 400, 18px);
+        }
+        .supporter-info {
+            margin-bottom: 25px;
+            &:last-child {
+                margin-bottom: 15px;
+            }
+        }
+        .supporter-info>span {
+            display: block;
+        }
+        &-btn {
+            width: 100%;
+            text-align: center;
+        }
+    }
+    &-btn-footer {
+        @extend .help-btn-fundraising;
+    }
+}
+
+.fundraising-progress {
+    height: 15px;
+    width: 100%;
+    background-color: $common-orange-color;
+    position: relative;
+    &-bar {
+        position: absolute;
+        height: 100%;
+        background-color: $white-text-color;
+        width: 25%;
+        right: 0;
+    }
+    &-current-sum {
+        position: absolute;
+        bottom: -25px;
+        left: 0;
+    }
+    &-final-sum {
+        position: absolute;
+        bottom: -25px;
+        right: 0;
+    }
+    &--margin-patient {
+        margin-bottom: 45px;
+    }
+}
+
+.social-counters {
+    display: flex;
+    flex-direction: row;
+    height: 21px;
+    &--margin-patient {
+        margin-bottom: 30px;
+    }
+    &-heart,
+    &-share {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        margin-right: 14px;
+        svg {
+            width: 20px;
+            margin-right: 3px;
+        }
+        span {
+            align-self: center;
+            @include text-styles($main-text-color, $mainfont, 14px, 300, 28px);
+        }
+    }
+}
+
+.help-btn-fundraising {
+    width: 248px;
+    height: 60px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    border-radius: 2px 2px 0;
+    background-color: $common-orange-color;
+    margin: 0 auto;
+    @include text-styles($common-gray-lighter-color, $mainfont, 16px, 400, 42px);
+    text-transform: uppercase;
+    &--margin-patient {
+        margin-bottom: 22px;
+    }
+    &:hover {
+        background-color: $common-orange-light-color;
+        box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.3);
+        border-radius: 2px 2px 0;
+    }
+    &:active {
+        background-color: $common-orange-color;
+        box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.3), inset 0 -1px 5px rgba(0, 0, 0, 0.3);
+        border-radius: 2px 2px 0;
+    }
+    &:disabled {
+        background-color: $common-disabled-color;
+    }
+}
