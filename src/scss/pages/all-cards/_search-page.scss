@@ -1,0 +1,266 @@
+.search-page_container {
+    width: 1134px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    .search-upper-section {
+        padding-top: 80px;
+        margin-bottom: 50px;
+        .search-upper-section_wrapper {
+            display: flex;
+            justify-content: center;
+            padding-top: 50px;
+            .search-input {
+                box-shadow: 0 1px 6px rgba(0, 0, 0, 0.24);
+                margin-right: 80px;
+                #search-field {
+                    width: 697px;
+                    height: 53px;
+                    background-color: #fafafa;
+                    padding-top: 10px;
+                    padding-left: 31px;
+                    outline-color: $common-orange-color;
+                }
+                 ::placeholder {
+                    color: #bcbbb9;
+                    font-size: 21px;
+                    font-weight: 400;
+                    line-height: 28px;
+                }
+                input[type="search"] {
+                    background-image: url("../img/search.png");
+                    background-position: 665px 17px;
+                    background-repeat: no-repeat;
+                    padding-right: 20px;
+                }
+            }
+            .select-disease {
+                position: relative;
+                #select-form {
+                    width: 356px;
+                    height: 53px;
+                    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.24);
+                    border: 1px solid #eaeae8;
+                    background-color: $white-text-color;
+                    padding: 19px 60px 12px 10px;
+                    color: #616161;
+                    font-size: 16px;
+                    line-height: 21px;
+                    outline: none;
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    appearance: none;
+                     ::-ms-expand {
+                        display: none;
+                        // hide the default arrow in ie10 and ie11
+                    }
+                }
+                .arrow-down {
+                    width: 8px;
+                    height: 4px;
+                    position: absolute;
+                    display: block;
+                    top: 20px;
+                    right: 17px;
+                    pointer-events: none;
+                }
+            }
+        }
+    }
+    .search-main {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+    }
+    .search-customization {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        .sort-md_wrapper {
+            display: flex;
+            justify-content: space-between;
+            width: 487px;
+            height: 16px;
+            a {
+                color: $main-text-color;
+                font-size: 16px;
+                line-height: 21px;
+            }
+             :hover,
+             :focus {
+                color: $common-orange-color;
+                font-weight: 500;
+                text-decoration: underline;
+            }
+        }
+    }
+    .users-block_list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 40px;
+        .users-line {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 50px;
+            .user-block_copy {
+                width: 372px;
+                box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
+                background-color: $white-text-color;
+                .img-wrap {
+                    max-width: inherit;
+                    max-height: 292px;
+                    margin: 0;
+                    img {
+                        width: 100%;
+                        height: 292px;
+                        object-fit: cover;
+                        overflow: hidden;
+                        margin: 0;
+                    }
+                }
+                .social-plugins {
+                    display: flex;
+                    margin-top: 14px;
+                    margin-left: 29px;
+                    .social-plugins_like {
+                        display: flex;
+                        flex-wrap: nowrap;
+                        width: 50px;
+                        margin-right: 15px;
+                    }
+                    .social-plugins_share {
+                        display: flex;
+                        flex-wrap: nowrap;
+                        width: 50px;
+                        margin-right: 15px;
+                    }
+                    .likes-count,
+                    .shares-count {
+                        margin-left: 5px;
+                        color: $main-text-color;
+                        font-size: 14px;
+                        font-weight: 300;
+                        line-height: 28px;
+                    }
+                    .svg-wrapper {
+                        svg {
+                            width: 20px;
+                            height: 20px;
+                        }
+                         :hover {
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+            .user-subblock-wrapper {
+                padding: 15px 25px 20px;
+            }
+            .h3-wrapper {
+                display: flex;
+                height: 42px;
+                h3 {
+                    display: inline;
+                    color: $main-text-color;
+                    font-weight: 700;
+                    line-height: 21px;
+                }
+            }
+            p {
+                height: 79px;
+            }
+            .progress-bar-wrapper {
+                .progress-bar {
+                    width: inherit;
+                    height: 15px;
+                    background-color: $bg-second-color;
+                    margin: 17px 0 9px;
+                    .progress-done {
+                        height: inherit;
+                        width: 75%;
+                        background-color: $common-orange-color;
+                    }
+                }
+                .progress-subbar {
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+        }
+    }
+    .watch-more {
+        display: flex;
+        justify-content: center;
+        margin: 0 0 84px;
+        a {
+            color: $main-text-color;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 28px;
+        }
+        a:hover {
+            cursor: pointer;
+            color: $common-orange-light-color;
+        }
+    }
+    .subscription-form-block {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-image: url("../img/rawpixel-558597-unsplash.png");
+        width: inherit;
+        height: 370px;
+        h2 {
+            margin-bottom: 48px;
+            color: $main-light-text-color;
+            span {
+                color: $common-orange-color;
+            }
+        }
+        form {
+            display: flex;
+            .email-subscription {
+                box-shadow: 0 1px 1px rgba(0, 0, 0, 0.24);
+                border: 1px solid #eaeae8;
+                background-color: $white-text-color;
+            }
+            input[type="submit"] {
+                color: $common-gray-lighter-color;
+                font-family: Roboto;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 42px;
+                text-transform: uppercase;
+            }
+            #email-submission-field {
+                width: 479px;
+                height: 53px;
+                padding-left: 30px;
+            }
+             ::placeholder {
+                width: 188px;
+                color: $gray-text-color;
+                font-family: Roboto;
+                font-size: 21px;
+                font-weight: 700;
+                line-height: 30px;
+                opacity: 0.4;
+            }
+             :focus-within,
+             :hover {
+                outline: none;
+                border-color: #e96b17;
+            }
+            #submit-button {
+                width: 248px;
+                height: 60px;
+                box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+                border-radius: 2px 2px 0;
+                background-color: $common-orange-color;
+                margin-left: 79px;
+            }
+        }
+    }
+}
