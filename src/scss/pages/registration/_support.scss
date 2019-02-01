@@ -1,0 +1,18 @@
+@import "mixins";
+
+.support{
+	display: flex;
+	justify-content: space-between;
+	margin: 50px 0;
+	font-size: 16px;
+	line-height: 21px;
+	color: $main-text-color;
+	&-email{
+		color: $orange-text-color;
+		margin-left: 3px;
+	}
+
+	&-profile{
+		color: $orange-text-color;
+	}	
+}

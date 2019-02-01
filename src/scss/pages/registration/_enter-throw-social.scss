@@ -1,0 +1,36 @@
+@import "mixins";
+
+.title{
+	@include title-text-main;
+}
+
+.enter-social-container{
+	margin-top: 49px;
+	&-title{
+		@include title-text;
+	}
+
+	.social-network{
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+		flex-wrap: wrap;
+		margin-top: 21px;
+		&-button{
+			@include social-button;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 13px;
+			font-weight: bold;
+			color: $main-text-color;
+			.icon{
+				position: relative;
+				width: 25px;
+				height: 25px;
+				right: 45px;
+			}
+		}
+	}
+}
+

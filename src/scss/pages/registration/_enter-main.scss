@@ -1,0 +1,150 @@
+@import "mixins";
+
+.form-container{
+	&-title{
+		@include title-text;
+	}
+}
+
+.form-main-input{
+	&-title{
+		@include title-text;
+	}
+
+	&-wrapper{
+		margin-top: 50px;
+		display: flex;
+		justify-content: space-around;
+		flex-wrap: wrap;
+		text-align: left;
+		.fieldset{
+			width: 400px;
+			position: relative;
+			.label{
+				@include title-text;
+				position: absolute;
+				left: 0;
+				top: -25px;
+				&-checkbox{
+					font-size: 14px;
+					line-height: 21px;
+					&::before{
+						content: '';
+						display: inline-block;
+						width: 20px;
+						height: 20px;
+						border: 3px solid #000;
+						border-radius: 3px;
+						float: left;
+						margin: 10px 20px 0 0;
+					}
+				}
+			}
+
+			.correctly{
+				background-image: url("../img/check-mark.jpg");
+				background-repeat: no-repeat;
+				background-position: 95% 50%;
+				width: 20px;
+				height: 20px;
+				position: absolute;
+			}
+
+			.input{
+				@include registration-input;
+				@include placeholder;
+				@include input-text;
+				caret-color: $bg-orange-color;
+				&-checkbox{
+					display: none;
+					+label:hover::before, +label:focus::before{
+						border-color: $common-orange-color;
+					};
+				}
+				&-checkbox:checked{
+					border: 0;
+					+label::before{
+						content: '\2714';
+						font-size: 24px;
+						text-align: center;
+						width: 20px;
+						height: 20px;
+						color: $common-orange-color;
+					}
+				}
+			}
+
+			.text{
+				font-size: 14px;
+				line-height: 21px;
+				position: absolute;
+   				top: 55px;
+			}
+
+			.border-right{
+				z-index: 1;
+				position: absolute;
+				display: inline-block;
+				width: 62px;
+				height: 53px;
+				border-right: 1px solid $common-gray-lighter-color;
+			}
+
+			.numbers{
+				z-index: 1;
+				position: absolute;
+				@include input-text;
+				line-height: 50px;
+				left: 5%;
+			}
+
+			.hooks{
+				z-index: 1;
+				position: absolute;
+				@include input-text;
+				line-height: 49px;
+				left: 19%;
+				letter-spacing: 38px;
+			}
+
+			.input-telephone{
+				@extend .input;
+				padding-left: 83px;
+			}
+		}
+
+		&-password{
+			@extend .form-main-input-wrapper;
+			flex-direction: column;
+			align-items: center;
+			margin-top: 80px;
+			>.fieldset:last-child{
+				margin-top: 100px;
+			}
+		}
+
+		&-checkbox{
+			@extend .form-main-input-wrapper;
+			.clearfix::after{
+				content: '';
+				clear: both;
+				display: block;
+			}
+		}
+
+		&-button{
+			@extend .form-main-input-wrapper;
+			.create-profile-button{
+				@include button;
+			}
+		}
+
+		button[disabled]{
+			background-color: $common-disabled-color;
+			&:hover{
+				background-color: $common-disabled-color;
+			}
+		}
+	}
+}
+
