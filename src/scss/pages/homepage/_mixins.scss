@@ -1,0 +1,138 @@
+@mixin lifespulse-text{
+	font-family: $mainfont;
+	text-transform: uppercase;
+	line-height: 88px;
+	font-weight: bold;
+	font-size: 66px;
+	color: $main-light-text-color;
+}
+
+@mixin main-button{
+	min-width: 248px;
+	height: 60px;
+	box-shadow: 1px 1px 3px rgba(0, 0, 0, .3);
+	background-color: $bg-orange-color;
+	font-size: 16px;
+	color: $light-gray-text-color;
+	line-height: 42px;
+	text-align: center;
+	text-transform: uppercase;
+	border-radius: 2px;
+	&:hover{
+		background-color: $common-orange-light-color;
+		box-shadow: 0 -1px 3px rgba(0, 0, 0, .3);
+	}
+	&:active{
+		background-color: $bg-orange-color;
+		box-shadow: 0 -1px 3px rgba(0, 0, 0, .3), inset 0, -1px, 5px rgba(0, 0, 0, .3);
+	}
+}
+
+@mixin transparent-button{
+	@include main-button;
+	color: $main-light-text-color;
+	border: 1px solid $common-orange-color;
+	background-color: rgba($bg-second-color, .3);
+	&:hover{
+		background-color: rgba($common-orange-light-color, .3);
+	}
+	&:active{
+		background-color: rgba($bg-orange-color, .3);
+	}
+}
+
+@mixin main-wrapper{
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 33px;
+	height: 100%;
+	box-sizing: border-box;
+}
+
+@mixin rubric{
+	font-size: 37px;
+	font-weight: bold;
+	line-height: 49px;
+	text-transform: uppercase;
+	color: $main-light-text-color;
+	border-bottom: 2px solid $common-orange-color;
+}
+
+@mixin card{
+	min-height: 100px;
+	max-width: 372px;
+	background-color: $bg-white-color;
+	box-shadow: 1px 1px 6px rgba(0, 0, 0, .3);
+	font-family: $mainfont;
+	>a{
+		outline: none;
+	}
+	&-image{
+		width: 100%;
+	}
+	&-wrapper-content{
+		padding: 19px 28px;
+		.icon-wrapper{
+			display: flex;
+			.icon{
+				display: flex;
+				align-items: center;
+				&-img{
+					width: 20px;
+					height: 20px;
+				}
+				&-counter{
+					font-size: 14px;
+					color: $main-text-color;
+					padding-left: 5px;
+					line-height: 28px;
+				}
+				&:first-child{
+					margin-right: 15px;
+				}
+			}
+		}
+
+		.title-name{
+			font-size: 21px;
+			color: $main-text-color;
+			line-height: 37px;
+			font-weight: 700;
+		}
+
+		.description{
+			font-size: 16px;
+			color: $main-text-color;
+			line-height: 21px;
+		}
+	}
+
+	.progress-wrapper{
+		padding: 19px 28px;
+		.progressbar{
+			width: 100%;
+			background-color: $bg-second-color;
+			&::-webkit-progress-bar{
+				background-color: $bg-second-color;
+			}
+			&::-webkit-progress-value{
+				background-color: $bg-orange-color;
+			}
+			&::-moz-progress-bar{
+				background-color: $bg-orange-color;
+			}
+		}
+		.counter{
+			display: flex;
+			justify-content: space-between;
+			.text{
+				font-size: 14px;
+				color: $main-text-color;
+				line-height: 38px;
+			}
+		}
+	}
+	&:nth-child(2){
+		margin: 0 10px;
+	}
+}

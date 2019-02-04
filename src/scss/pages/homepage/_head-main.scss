@@ -1,0 +1,58 @@
+@import "mixins";
+
+.head{
+	min-height: 900px;
+	background-image: url("../img/patrick-fore-403383-unsplash.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	font-family: $mainfont;
+	&-wrapper{
+		@include main-wrapper;
+	}
+	&-container{
+		width: 50%;
+		min-height: 900px;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		left: 73px;
+		.container-text{
+			.headline{
+				@include lifespulse-text;
+				>span{
+					color: $orange-text-color;
+				}
+			}
+			.description{
+				width: 295px;
+				text-align: left;
+				font-size: 21px;
+				font-weight: light;
+				line-height: 28px;
+				color: $main-light-text-color;
+			}
+		}
+		.container-buttons{
+			display: flex;
+			.button{
+				margin-top: 64px;
+				@include main-button;
+				&:first-child{
+					margin-right: 49px;
+				}
+				&:nth-child(2){
+					@include transparent-button;
+				}
+			}
+			>button[disabled]{
+				background-color: $common-disabled-color;
+				&:hover{
+					background-color: $common-disabled-color;
+					box-shadow: none;
+				}
+			}
+		}
+	}
+}
