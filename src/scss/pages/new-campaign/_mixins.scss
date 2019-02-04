@@ -1,0 +1,21 @@
+@mixin text-styles($color, $fontFamily, $size, $weight, $lineHeight) {
+    color: $color;
+    font-family: $fontFamily;
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $lineHeight;
+}
+
+@mixin focus-decoration() {
+    box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.24);
+    border: 1px solid $common-orange-color;
+    background-color: $white-text-color;
+    color: $main-text-color;
+}
+
+@mixin input-decoration() {
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.24);
+    border: 1px solid #eaeae8;
+    background-color: $white-text-color;
+    outline: none;
+}
