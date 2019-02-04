@@ -1,0 +1,26 @@
+@import "mixins";
+
+.wrapper{
+	@include main-wrapper;
+	margin-top: 50px;
+	.headline{
+		@include rubric;
+	}
+}
+
+
+.work-steps{
+	margin-top: 50px;
+	background-color: $bg-third-color;
+	&-wrapper{
+		@include main-wrapper;
+	}
+	&-container{
+		min-height: 900px;
+		background-image: url("../img/bung.jpg");
+		background-size: auto;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+}
+
