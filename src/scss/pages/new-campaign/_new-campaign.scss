@@ -1,0 +1,18 @@
+@import "mixins";
+.new-campaign {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 50px 0 109px;
+    h2 {
+        text-align: center;
+        display: block;
+        @include text-styles($main-light-text-color, $mainfont, 37px, 700, 37px);
+        text-transform: uppercase;
+        margin-bottom: 29px;
+    }
+    &-inner {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}

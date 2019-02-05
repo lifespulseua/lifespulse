@@ -113,7 +113,7 @@
             <div class="new-campaign-goal">
                 <div class="new-campaign-goal-desc">
                     <label for="goal">Укажите цель сбора средств:</label>
-                    <textarea name="goal" placeholder="Острое нарушение мозгового кровообращения по ишемическому типу в басейне левой внутренней сонной артерии"></textarea>
+                    <textarea name="goal" id="goal" placeholder="Острое нарушение мозгового кровообращения по ишемическому типу в басейне левой внутренней сонной артерии"></textarea>
                     <span>Вы можете ввести не больше 130 знаков, включая пробелы</span>
                 </div>
                 <div class="new-campaign-inner">
@@ -123,11 +123,47 @@
                     </div>
                     <div class="new-campaign-goal-category">
                         <label for="category">Категория заболевания:</label>
-                        <select name="category">
+                        <select name="category" id="category">
                             <option value="null">Не выбрано</option>
                             <option value="test">Test</option>
                             <option value="test">Test</option>
                         </select>
+                    </div>
+                </div>
+            </div>
+            <div class="new-campaign-fundraiser">
+                <h3>Кто собирает стредства?</h3>
+                <div class="new-campaign-inner">
+                    <div>
+                        <label for="full-name">Фамилия, имя и отчество:</label>
+                        <input type="text" name="full-name" id="full-name" placeholder="Василий Васильев Васильевич">
+
+                        <label for="account-number">Номер счета в украинском банке:</label>
+                        <input type="text" name="account-number" id="account-number" placeholder="0000 0000 0000 0000">
+
+                        <label for="banks-name">Полное название банка:</label>
+                        <input type="text" name="banks-name" id="banks-name" placeholder="АО КБ “Приватбанк”">
+
+                        <label for="mfo">МФО:</label>
+                        <input type="text" name="mfo" id="mfo" placeholder="000000">
+                    </div>
+                    <div>
+                        <div class="new-campaign-fundraiser-phone">
+                            <label for="phone">Номер телефона:</label>
+                            <input type="tel" name="phone" id="phone" placeholder="(096) 33 33 333">
+                            <span>+38</span>
+                        </div>
+
+                        <fieldset>
+                            <legend>Серия и номер паспорта:</legend>
+                            
+                            <input id="passport-series" name="passport-series" placeholder="КМ">
+
+                            <input id="passport-number" name="passport-number" placeholder="000000">
+                        </fieldset>
+
+                        <label for="id-code">МФО:</label>
+                        <input type="text" name="id-code" id="id-code" placeholder="00000000">
                     </div>
                 </div>
             </div>
