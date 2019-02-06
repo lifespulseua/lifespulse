@@ -1,0 +1,145 @@
+@import "mixins";
+.new-campaign-patient {
+    margin-bottom: 50px;
+    h3 {
+        @include text-styles($main-light-text-color, $mainfont, 21px, 700, 21px);
+        margin-bottom: 25px;
+    }
+    label,
+    legend {
+        @include text-styles($main-text-color, $mainfont, 21px, 400, 21px);
+        display: block;
+        margin-bottom: 4px;
+    }
+    input:not(.radio-input) {
+        width: 400px;
+        height: 50px;
+        padding-left: 15px;
+        margin-bottom: 20px;
+        @include text-styles($main-text-color, $mainfont, 21px, 400, 50px);
+        @include input-decoration();
+        &::placeholder {
+            @include text-styles($gray-text-color, $mainfont, 21px, 400, 50px);
+        }
+        &:focus {
+            @include focus-decoration();
+        }
+    }
+    input[name=locality],
+    input[name=address-patient],
+        {
+        width: 300px;
+    }
+    &-calendar {
+        position: relative;
+        input[type=date] {
+            width: 250px;
+            color: $gray-text-color;
+            &::-webkit-calendar-picker-indicator {
+                width: 32px;
+                height: 49px;
+                cursor: pointer;
+                background-color: #fff;
+                color: rgba(0, 0, 0, 0);
+            }
+            &:focus~.open-button {
+                background-color: $common-orange-color;
+                top: 25px;
+                right: 150px;
+                width: 43px;
+                height: 49px;
+            }
+            &:focus+.line {
+                display: none;
+            }
+            &:focus~.open-button button .svg--focus-state {
+                display: block;
+                margin-top: 8px;
+                margin-left: 4px;
+            }
+            &:focus~.open-button button svg.svg--normal-state {
+                display: none;
+            }
+        }
+        .line {
+            height: 50px;
+            width: 1px;
+            position: absolute;
+            background-color: #eaeae8;
+            left: 205px;
+        }
+        .open-button {
+            position: absolute;
+            top: 33px;
+            right: 152px;
+            width: 38px;
+            height: 38px;
+            background: #fff;
+            pointer-events: none;
+        }
+        .open-button button {
+            border: none;
+            background: transparent;
+            svg {
+                width: 38px;
+                height: 38px;
+            }
+            .svg--focus-state {
+                display: none;
+            }
+        }
+    }
+    fieldset {
+        div,
+        label {
+            display: inline-block;
+        }
+        legend {
+            margin-bottom: 10px;
+        }
+        div svg {
+            width: 11px;
+            height: 9px;
+            display: none;
+        }
+        div {
+            position: relative;
+        }
+        input[type=radio] {
+            display: none;
+            &:checked+label:before {
+                content: " ";
+                display: inline-block;
+                position: relative;
+                top: 5px;
+                margin: 0 10px 0 0;
+                border-radius: 50%;
+                width: 24px;
+                height: 24px;
+                box-shadow: 0 1px 1px rgba(0, 0, 0, 0.24);
+                background-color: $common-orange-color;
+            }
+            &:checked~svg {
+                position: absolute;
+                display: block;
+                top: 13px;
+                left: 7px;
+            }
+        }
+        label {
+            margin-right: 56px;
+        }
+        label:before {
+            content: " ";
+            display: inline-block;
+            position: relative;
+            top: 5px;
+            margin: 0 10px 0 0;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.24);
+            background-color: $white-text-color;
+        }
+    }
+}
