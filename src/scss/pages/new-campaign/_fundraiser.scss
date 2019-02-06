@@ -1,1 +1,66 @@
 @import "mixins";
+.new-campaign-fundraiser {
+    margin-bottom: 50px;
+    h3 {
+        @include text-styles($main-light-text-color, $mainfont, 21px, 700, 21px);
+        margin-bottom: 25px;
+    }
+    label,
+    legend {
+        @include text-styles($main-text-color, $mainfont, 21px, 400, 21px);
+        display: block;
+        margin-bottom: 4px;
+    }
+    input {
+        width: 400px;
+        height: 50px;
+        padding-left: 15px;
+        margin-bottom: 20px;
+        @include text-styles($main-text-color, $mainfont, 21px, 400, 50px);
+        @include input-decoration();
+        &::placeholder {
+            @include text-styles($gray-text-color, $mainfont, 21px, 400, 50px);
+        }
+        &:focus {
+            @include focus-decoration();
+        }
+    }
+    input[name=mfo] {
+        width: 250px;
+        margin-bottom: 0;
+    }
+    input[name=phone],
+    input[name=id-code],
+    fieldset {
+        width: 300px;
+    }
+    &-phone {
+        position: relative;
+        input[type=tel] {
+            padding-left: 70px;
+            &::placeholder {
+                line-height: 46px;
+            }
+        }
+        span {
+            position: absolute;
+            left: 0;
+            top: 0;
+            border-right: 1px solid #eaeae8;
+            padding: 0 5px 0 20px;
+            @include text-styles($main-text-color, $mainfont, 21px, 400, 50px);
+        }
+    }
+    fieldset {
+        input {
+            display: inline-block;
+        }
+        input[name=passport-series] {
+            width: 70px;
+            margin-right: 17px;
+        }
+        input[name=passport-number] {
+            width: 209px;
+        }
+    }
+}
