@@ -1,0 +1,114 @@
+@import "mixins";
+.new-campaign-time-period {
+    margin-bottom: 30px;
+    position: relative;
+    svg {
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        right: 66px;
+        top: 38px;
+        cursor: pointer;
+        z-index: 11;
+        &:hover+.new-campaign-time-period-popup {
+            display: block;
+        }
+    }
+    &-popup {
+        display: none;
+        width: 302px;
+        height: 181px;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.24);
+        border: 1px solid #eaeae8;
+        background-color: $white-text-color;
+        position: absolute;
+        right: -30px;
+        top: 67px;
+        padding: 20px 20px 20px 50px;
+        z-index: 111;
+        @include text-styles($main-text-color, $mainfont, 16px, 400, 21px);
+        svg {
+            position: absolute;
+            left: 20px;
+            top: 20px;
+        }
+    }
+    legend {
+        @include text-styles($main-light-text-color, $mainfont, 21px, 700, 21px);
+        margin-bottom: 25px;
+    }
+    label {
+        @include text-styles($main-text-color, $mainfont, 21px, 400, 21px);
+        display: block;
+        margin-bottom: 0;
+    }
+    fieldset {
+        margin-bottom: 50px;
+        div,
+        label {
+            display: inline-block;
+        }
+        legend {
+            margin-bottom: 10px;
+        }
+        div svg {
+            width: 11px;
+            height: 9px;
+            display: none;
+        }
+        div {
+            position: relative;
+        }
+        input[type=radio] {
+            display: none;
+            &:checked+label:before {
+                content: " ";
+                display: inline-block;
+                position: relative;
+                top: 5px;
+                margin: 0 10px 0 0;
+                border-radius: 50%;
+                width: 24px;
+                height: 24px;
+                box-shadow: 0 1px 1px rgba(0, 0, 0, 0.24);
+                background-color: $common-orange-color;
+            }
+            &:checked~svg {
+                position: absolute;
+                display: block;
+                top: 13px;
+                left: 7px;
+            }
+        }
+        label {
+            margin-right: 56px;
+        }
+        label:before {
+            content: " ";
+            display: inline-block;
+            position: relative;
+            top: 5px;
+            margin: 0 10px 0 0;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.24);
+            background-color: $white-text-color;
+            cursor: pointer;
+        }
+    }
+    textarea {
+        height: 280px;
+        width: 100%;
+        margin-bottom: 6px;
+        padding: 25px;
+        @include text-styles($main-text-color, $mainfont, 21px, 400, 28px);
+        @include input-decoration();
+        &::placeholder {
+            @include text-styles($gray-text-color, $mainfont, 21px, 400, 26px);
+        }
+        &:focus {
+            @include focus-decoration();
+        }
+    }
+}
