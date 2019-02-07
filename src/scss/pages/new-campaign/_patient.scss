@@ -11,6 +11,9 @@
         display: block;
         margin-bottom: 0;
     }
+    label {
+        margin-bottom: 4px;
+    }
     input:not(.radio-input) {
         width: 400px;
         height: 50px;
@@ -26,8 +29,7 @@
         }
     }
     input[name=locality],
-    input[name=address-patient],
-        {
+    input[name=address-patient] {
         width: 300px;
     }
     &-calendar {
@@ -44,7 +46,7 @@
             }
             &:focus~.open-button {
                 background-color: $common-orange-color;
-                top: 21px;
+                top: 25px;
                 right: 150px;
                 width: 43px;
                 height: 49px;
@@ -70,7 +72,7 @@
         }
         .open-button {
             position: absolute;
-            top: 29px;
+            top: 32px;
             right: 152px;
             width: 38px;
             height: 38px;

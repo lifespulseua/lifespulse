@@ -38,13 +38,16 @@
         opacity: 0;
         width: 178px;
         height: 45px;
-        display: block;
-        cursor: pointer; // хреновенько работает, не нашел решения
+        display: block; // cursor: pointer; // хреновенько работает, не нашел решения
         &:hover+.btn-file {
             background-color: #ffe6d6;
         }
         &:active+.btn-file {
             background-color: #f8d2b9;
+        }
+        &:disabled+.btn-file {
+            background-color: #f7f7f7;
+            border: 1px solid $main-light-text-color;
         }
     }
 }

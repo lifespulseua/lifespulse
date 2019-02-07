@@ -1,0 +1,50 @@
+@import "mixins";
+.new-campaign-submit-form {
+    p {
+        width: 512px;
+        margin: 0 auto;
+        @include text-styles($main-text-color, $mainfont, 16px, 400, 16px);
+        margin-bottom: 19px;
+    }
+    input {
+        width: 203px;
+        height: 50px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+        border-radius: 2px 2px 0;
+        @include text-styles($main-light-text-color, $mainfont, 16px, 400, 50px);
+        text-transform: uppercase;
+        margin: 0 10px;
+        cursor: pointer;
+    }
+    div {
+        display: flex;
+        justify-content: center;
+    }
+    input[type=submit] {
+        background-color: $common-orange-color;
+        color: $common-gray-lighter-color;
+        &:hover {
+            background-color: $common-orange-light-color;
+        }
+        &:active {
+            background-color: $common-orange-color;
+        }
+        &:disabled {
+            background-color: $common-disabled-color;
+        }
+    }
+    input[type=reset] {
+        background-color: $bg-second-color;
+        border: 1px solid $common-orange-color;
+        &:hover {
+            background-color: #ffe6d6;
+        }
+        &:active {
+            background-color: #f8d2b9;
+        }
+        &:disabled {
+            background-color: #f7f7f7;
+            border: 1px solid $main-light-text-color;
+        }
+    }
+}
