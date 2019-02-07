@@ -279,9 +279,38 @@
                 </fieldset>
                 <textarea name="description" id="description" placeholder="Опишите свою ситуацию..."></textarea>
             </div>
+
+            <div class="new-campaign-documents">
+                <h3>Загрузите необходимые документы</h3>
+                <p>Загруженные документы необходимы для подтверждения указанной информации нашими модераторами. Ваши
+                    данные не будут доступны другим пользователям.</p>
+
+                <div>
+                    <label for="patient-inn-scan">Фото / скан индефикационного кода (ИНН)</label>
+                    <input type="file" name="patient-inn-scan" id="patient-inn-scan">
+                    <button type="button" class="btn-file">ВЫБРАТЬ</button>
+                </div>
+                <div>
+                    <label for="patient-passport-scan">Фото / скан паспорта реципиента (больного)</label>
+                    <input type="file" name="patient-passport-scan" id="patient-passport-scan">
+                    <button type="button" class="btn-file">ВЫБРАТЬ</button>
+                </div>
+
+                <div>
+                    <label for="fundraiser-passport-scan">Фото / скан паспорта автора заявки</label>
+                    <input type="file" name="fundraiser-passport-scan" id="fundraiser-passport-scan">
+                    <button type="button" class="btn-file">ВЫБРАТЬ</button>
+                </div>
+
+                <div>
+                    <label for="patient-docs-scan">Фото / скан больничных документов
+                        (выписки, заключения врачей)</label>
+                    <input type="file" name="patient-docs-scan" id="patient-docs-scan">
+                    <button type="button" class="btn-file">ВЫБРАТЬ</button>
+                </div>
+            </div>
         </form>
     </div>
-
     <footer class="main-footer">
         <div class="main-footer-wrapper">
             <div>

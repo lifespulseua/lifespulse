@@ -1,0 +1,50 @@
+@import "mixins";
+.new-campaign-documents {
+    margin-bottom: 50px;
+    h3 {
+        @include text-styles($main-light-text-color, $mainfont, 21px, 700, 21px);
+        margin-bottom: 14px;
+    }
+    p {
+        @include text-styles($main-text-color, $mainfont, 16px, 400, 21px);
+        margin-bottom: 22px;
+    }
+    div {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        position: relative;
+        .btn-file {
+            position: absolute;
+            display: block;
+            width: 178px;
+            height: 45px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+            border-radius: 2px 2px 0;
+            border: 1px solid $common-orange-color;
+            right: 0;
+            @include text-styles($main-light-text-color, $mainfont, 16px, 400, 45px);
+            text-transform: uppercase;
+            pointer-events: none;
+        }
+    }
+    label {
+        @include text-styles($main-text-color, $mainfont, 21px, 400, 21px);
+        width: 55%;
+    }
+    input[type=file] {
+        opacity: 0;
+        width: 178px;
+        height: 45px;
+        display: block;
+        cursor: pointer; // хреновенько работает, не нашел решения
+        &:hover+.btn-file {
+            background-color: #ffe6d6;
+        }
+        &:active+.btn-file {
+            background-color: #f8d2b9;
+        }
+    }
+}
