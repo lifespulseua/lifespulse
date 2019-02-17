@@ -1,0 +1,57 @@
+@import "mixins";
+
+.story{
+	min-height: 400px;
+	margin-top: 30px;
+	display: flex;
+	flex-wrap: wrap;
+	&-container{
+		.img-wrap{
+			width: 50%;
+			height: 400px;
+			float: left;
+			background-image: url("../img/left-img.jpg");
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+
+		.content-wrap{
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			width: 50%;
+			height: 400px;
+			float: right;
+			color: $main-text-color;
+			background-color: $bg-white-color;
+			padding: 0 50px 0 33px;
+			overflow: auto;
+			.more{
+				@include know-more;
+				text-align: left;
+				margin: 0;
+			}
+			.title{
+				font-size: 21px;
+				font-weight: 700;
+				line-height: 28px;
+				text-transform: uppercase;
+			}
+			.description{
+				margin: 34px 0;
+				font-size: 16px;
+				line-height: 21px;
+			}
+			.date-container{
+				@include date-container;
+			}
+		}
+	}
+
+	&::after{
+		content: '';
+		clear: both;
+		display: flex;
+	}
+}
